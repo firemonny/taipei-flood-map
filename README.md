@@ -1,11 +1,6 @@
-# leaflet-map-template
+# 台北淹水預測地圖
 
-The template is using Vue to generate a basic leaflet map
-
-## Getting Started
-
-The template provide a vue template for you starting using leaflet.
-The CSS is pre-installed in the template
+Base on leaflet and Data.Taipei generate the map. Showing high possiable flooding area.
 
 ## Project setup
 
