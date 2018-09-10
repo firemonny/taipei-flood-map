@@ -21,6 +21,15 @@ export default {
     this.initMap();
     this.getKmlData();
   },
+  watch: {
+    geoJsonData() {
+      if (this.geoJsonData.length != 0) {
+        this.geoJsonData.forEach(data => {
+          this.drawGeoJson(data);
+        });
+      }
+    }
+  },
   methods: {
     initMap() {
       this.map = L.map("map", {
@@ -61,11 +70,6 @@ export default {
               name: data.config.url.replace(".json", ""),
               geoJson: data.data
             });
-          });
-        })
-        .then(() => {
-          this.geoJsonData.forEach(data => {
-            this.drawGeoJson(data);
           });
         });
     },
